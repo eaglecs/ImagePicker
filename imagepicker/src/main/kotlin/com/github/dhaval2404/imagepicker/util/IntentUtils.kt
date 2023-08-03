@@ -92,7 +92,7 @@ object IntentUtils {
      */
     @JvmStatic
     fun isCameraAppAvailable(context: Context): Boolean {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        val intent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
         return intent.resolveActivity(context.packageManager) != null
     }
 

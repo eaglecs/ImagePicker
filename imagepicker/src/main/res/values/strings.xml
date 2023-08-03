@@ -4,10 +4,10 @@
 
     <string name="title_choose_image_provider">Choose</string>
     <string name="action_cancel">Cancel</string>
-    <string name="title_gallery">Gallery</string>
-    <string name="title_camera">Camera</string>
+    <string name="title_gallery">Bộ sưu tập</string>
+    <string name="title_camera">Máy ảnh</string>
 
-     <string name="permission_camera_denied">
+    <string name="permission_camera_denied">
         <![CDATA[Camera permission is needed to take a picture. Please allow permission from Settings > Permissions.]]></string>
 
     <string name="error_failed_to_create_camera_image_file">Failed to create Camera image file</string>
@@ -24,6 +24,7 @@
     <string name="ucrop_rotate">Rotate</string>
     <string name="ucrop_scale">Scale</string>
     <string name="ucrop_crop">Crop</string>
+    <string name="text_title_choose" translatable="false">Chọn Ảnh</string>
     <!-- uCrop string resource end -->
 
 </resources>

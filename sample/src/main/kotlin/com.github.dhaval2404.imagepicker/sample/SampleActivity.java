@@ -99,20 +99,23 @@ public class SampleActivity extends AppCompatActivity {
         ImagePicker.with(this)
                 // Crop Square image
                 .cropSquare()
-                .setImageProviderInterceptor(new Function1<ImageProvider, Unit>() {
-                    @Override
-                    public Unit invoke(ImageProvider imageProvider) {
-                        Log.d("ImagePicker", "Selected ImageProvider: " + imageProvider.toString());
-                        return null;
-                    }
-                }).setDismissListener(new DismissListener() {
-            @Override
-            public void onDismiss() {
-                Log.d("ImagePicker", "Dialog Dismiss");
-            }
-        })
+                .galleryMimeTypes(new String[]{"image/*"
+                })
+//                .setImageProviderInterceptor(new Function1<ImageProvider, Unit>() {
+//                    @Override
+//                    public Unit invoke(ImageProvider imageProvider) {
+//                        Log.d("ImagePicker", "Selected ImageProvider: " + imageProvider.toString());
+//                        return null;
+//                    }
+//                }).setDismissListener(new DismissListener() {
+//            @Override
+//            public void onDismiss() {
+//                Log.d("ImagePicker", "Dialog Dismiss");
+//            }
+//        })
                 // Image resolution will be less than 512 x 512
                 .maxResultSize(200, 200)
+                .provider(ImageProvider.BOTH)
                 .start(PROFILE_IMAGE_REQ_CODE);
     }
 
@@ -123,10 +126,10 @@ public class SampleActivity extends AppCompatActivity {
                 // User can only select image from Gallery
                 .galleryOnly()
 
-                .galleryMimeTypes(new String[]{"image/png",
-                        "image/jpg",
-                        "image/jpeg"
-                })
+//                .galleryMimeTypes(new String[]{"image/png",
+//                        "image/jpg",
+//                        "image/jpeg"
+//                })
                 // Image resolution will be less than 1080 x 1920
                 .maxResultSize(1080, 1920)
                 // .saveDir(getExternalFilesDir(null))

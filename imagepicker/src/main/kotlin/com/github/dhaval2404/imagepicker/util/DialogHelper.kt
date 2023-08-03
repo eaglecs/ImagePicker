@@ -30,15 +30,15 @@ internal object DialogHelper {
         val layoutInflater = LayoutInflater.from(context)
         val customView = layoutInflater.inflate(R.layout.dialog_choose_app, null)
 
-        val dialog = AlertDialog.Builder(context)
-            .setTitle(R.string.title_choose_image_provider)
+        val dialog = AlertDialog.Builder(context, R.style.MyDialogTheme)
+//            .setTitle(R.string.title_choose_image_provider)
             .setView(customView)
             .setOnCancelListener {
                 listener.onResult(null)
             }
-            .setNegativeButton(R.string.action_cancel) { _, _ ->
-                listener.onResult(null)
-            }
+//            .setNegativeButton(R.string.action_cancel) { _, _ ->
+//                listener.onResult(null)
+//            }
             .setOnDismissListener {
                 dismissListener?.onDismiss()
             }

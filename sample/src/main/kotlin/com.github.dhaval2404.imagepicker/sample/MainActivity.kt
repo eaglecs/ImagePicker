@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
     fun pickProfileImage(view: View) {
         ImagePicker.with(this)
             // Crop Square image
-            .galleryOnly()
+//            .galleryOnly()
             .cropSquare()
             .setImageProviderInterceptor { imageProvider -> // Intercept ImageProvider
                 Log.d("ImagePicker", "Selected ImageProvider: " + imageProvider.name)

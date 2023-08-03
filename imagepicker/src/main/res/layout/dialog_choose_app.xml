@@ -2,59 +2,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="200dp"
+    android:background="@drawable/bg_dialog"
     android:baselineAligned="false"
-    android:orientation="horizontal"
+    android:gravity="center"
+    android:orientation="vertical"
     android:padding="16dp">
 
-    <LinearLayout
-        android:id="@+id/lytCameraPick"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/averta_regular"
         android:gravity="center"
-        android:orientation="vertical">
+        android:text="@string/text_title_choose"
+        android:textColor="@color/ucrop_color_widget_background"
+        android:textSize="16sp" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:srcCompat="@drawable/ic_photo_camera_black_48dp"
-            app:tint="@color/dialog_choose_icon_color" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/title_camera"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/dialog_choose_text_color" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/lytGalleryPick"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            app:srcCompat="@drawable/ic_photo_black_48dp"
-            app:tint="@color/dialog_choose_icon_color" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/lytCameraPick"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/title_gallery"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/dialog_choose_text_color" />
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-    </LinearLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_photo_camera_black_48dp"
+                app:tint="@color/ucrop_color_widget_background" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/averta_regular"
+                android:text="@string/title_camera"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/ucrop_color_widget_background"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytGalleryPick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_photo_black_48dp"
+                app:tint="@color/ucrop_color_widget_background" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/averta_regular"
+                android:text="@string/title_gallery"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/ucrop_color_widget_background"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </LinearLayout>
