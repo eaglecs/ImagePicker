@@ -69,8 +69,8 @@ object IntentUtils {
      * @return Intent Camera Intent
      */
     @JvmStatic
-    fun getCameraIntent(context: Context, file: File): Intent? {
-        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+    fun getCameraIntent(context: Context, file: File): Intent {
+        val intent = Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             // authority = com.github.dhaval2404.imagepicker.provider
