@@ -122,7 +122,7 @@ public class SampleActivity extends AppCompatActivity {
     public void pickGalleryImage(View view) {
         ImagePicker.with(this)
                 // Crop Image(User can choose Aspect Ratio)
-                .crop()
+                .cropSquare()
                 // User can only select image from Gallery
                 .galleryOnly()
 
